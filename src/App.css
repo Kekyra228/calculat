@@ -8,17 +8,74 @@
 }
 
 .calc {
+  background-color: #fff3e6;
+  border: 2px solid #ffc4a3;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 10px;
-  background-color: aliceblue;
+  width: 300px;
 }
-
-form input {
+.display {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.display input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  text-align: right;
   border: none;
-  outline: 0;
+  border-radius: 10px;
+  background-color: #fffcf5;
+  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.1);
+  color: #ff6f61;
+  font-family: inherit;
+}
+.numbers,
+.operators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+#number-val,
+#operator-val {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
-  font-size: 18px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #ffcccb;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#number-val:hover,
+#operator-val:hover {
+  background-color: #ffabac;
+  transform: scale(1.1);
+}
+
+#number-val:active,
+#operator-val:active {
+  transform: scale(0.95);
+}
+
+#operator-val {
+  background-color: #ffb6b6;
+  color: #fff;
+}
+
+/* form input {
+  border: none;
+  outline: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 22px;
   background-color: white;
   margin: 2px;
   border-radius: 15px;
@@ -39,8 +96,14 @@ form .display {
 form .display input {
   text-align: right;
   flex: 1;
-  background-color: rgb(68, 51, 59);
+  background-color: rgb(24, 18, 21);
   font-size: 20px;
   padding: 10px;
   box-sizing: border-box;
+  font-size: 36px;
+  font-weight: bold;
 }
+
+form input.equality {
+  width: 160px;
+} */
